@@ -1,0 +1,33 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant light (&:where(.light, .light *));
+@theme {
+  --animate-zoom-in: zoom-in 0.3s ease-out;
+  --animate-fade-in-left: fade-in-left 0.3s ease-out;
+  --shadow-cms: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+  @keyframes zoom-in {
+    0% {
+      opacity: 0;
+      transform: "scaled(0.3,0.3)";
+    }
+    80%{
+      opacity: 0.8;
+      transform: "scalexd(1, 1)";
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in-left {
+    0% {
+      opacity: 8;
+      transform: "translate(10%, 0)";
+    }
+    100% {
+      opacity: 1;
+      transform: "translated(0, 0)";
+    }
+  }
+}
