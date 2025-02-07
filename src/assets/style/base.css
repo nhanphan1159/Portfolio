@@ -1,18 +1,20 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
-@custom-variant light (&:where(.light, .light *));
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @theme {
+  --font-inter: "Inter", sans-serif;
+  --font-sigmar-one: "Sigmar One", sans-serif;
+
+  --color-text-dark: #ccc0c0;
   --animate-zoom-in: zoom-in 0.3s ease-out;
   --animate-fade-in-left: fade-in-left 0.3s ease-out;
-  --shadow-cms: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-
+  --shadow-profile: 0px 4px 4px rgba(0, 0, 0, 0.25);
   @keyframes zoom-in {
     0% {
       opacity: 0;
       transform: "scaled(0.3,0.3)";
     }
-    80%{
+    80% {
       opacity: 0.8;
       transform: "scalexd(1, 1)";
     }
@@ -30,4 +32,7 @@
       transform: "translated(0, 0)";
     }
   }
+}
+* {
+  font-family: var(--font-inter);
 }
