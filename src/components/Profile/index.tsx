@@ -1,6 +1,6 @@
 import type { FC } from "react";
 
-import AvatarImg from "@src/assets/avatar.png";
+import AvatarImg from "@src/assets/avatar.webp";
 import IconBirthday from "@src/assets/iconBirthday.svg?react";
 import IconGithub from "@src/assets/iconGithub.svg?react";
 import IconLinked from "@src/assets/iconLinked.svg?react";
