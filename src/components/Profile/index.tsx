@@ -35,43 +35,48 @@ const Profile: FC<Props> = ({ className = "" }) => {
     },
     {
       icon: <IconBirthday />,
-      value: "22",
+      value: "21/08/2000",
     },
   ];
   return (
-    <div className="flex flex-col justify-center items-center relative">
-      <Avatar img={AvatarImg} className="size-[200px] absolute -top-[63px]" />
-      <div
-        className={cn(
-          "flex flex-col justify-end items-center rounded-xl w-[369px] h-[696px] pb-[35px] border-2 border-[#B7A261] gap-[34px]",
-          className
-        )}
-      >
-        <div className="flex gap-[10px] flex-col justify-center items-center">
-          <h1 className="font-bold text-[26px] leading-[150%]">
-            Phan Huynh Huun Nhan
-          </h1>
-          <Job text="Frontend Developer" className="shadow-cms" />
-        </div>
-        <div className="flex gap-5">
-          <Social
-            icon={<IconLinked />}
-            url="https://www.facebook.com"
-            className="bg-[#3662E3]"
-          />
-          <Social
-            icon={<IconGithub />}
-            url="https://www.facebook.com"
-            className="bg-black dark:bg-white"
-          />
-        </div>
-        <div className="flex flex-col gap-2.5 p-5 bg-[#F9F6EA] rounded-2xl dark:bg-[#3B3729]">
-          {info.map((item, index) => (
-            <Info key={index} icon={item.icon} text={item.value} />
-          ))}
-        </div>
-        <Button lable="View Resume" />
+    <div
+      className={cn(
+        "flex flex-col justify-end items-center rounded-xl w-[300px] h-[500px] pb-5 border-2 border-[#B7A261] gap-3",
+        className
+      )}
+    >
+      <div className="flex gap-2 flex-col justify-center items-center">
+        <Avatar img={AvatarImg} className="size-[150px] -mt-[90px]" />
+
+        <h2 className="font-bold text-[18px] leading-[150%] dark:text-[#CCC0C0]">
+          Phan Huynh Huu Nhan
+        </h2>
+        <Job
+          text="Frontend Developer"
+          className="shadow-profile dark:text-[#CCC0C0] dark:bg-[#4B3D10] bg-[#B7A261] text-sm leading-[150%]"
+        />
       </div>
+      <div className="flex gap-5">
+        <Social
+          icon={<IconLinked />}
+          url="https://www.facebook.com"
+          className="bg-[#3662E3]"
+        />
+        <Social
+          icon={<IconGithub />}
+          url="https://www.facebook.com"
+          className="bg-black dark:bg-white dark:text-white"
+        />
+      </div>
+      <div className="flex flex-col gap-2.5 p-3 bg-[#F9F6EA] rounded-2xl dark:bg-[#3B3729] shadow-profile">
+        {info.map((item, index) => (
+          <Info key={index} icon={item.icon} text={item.value} />
+        ))}
+      </div>
+      <Button
+        lable="View Resume"
+        className="dark:bg-[#C2B293] shadow-profile"
+      />
     </div>
   );
 };

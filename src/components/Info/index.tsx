@@ -16,10 +16,12 @@ const Info: FC<Props> = ({ className = "", icon, text }) => {
         className
       )}
     >
-      <div className="bg-[#D9D9D9] rounded flex items-center justify-center size-[35px] dark:bg-black  dark:fill-white">
+      <div className="bg-[#D9D9D9] rounded flex items-center justify-center size-[28px] dark:bg-black dark:text-white">
         {icon}
       </div>
-      <span className="text-[15px] leading-[150%] font-medium">{text}</span>
+      <span className="text-[15px] leading-[150%] font-medium dark:text-text-dark">
+        {text}
+      </span>
     </div>
   );
 };
