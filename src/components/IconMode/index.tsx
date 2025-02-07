@@ -1,7 +1,7 @@
 import { type FC, useEffect, useState } from "react";
 
 import IconDark from "@src/assets/iconDark.svg?react";
-import IconLight from "@src/assets/iconlight.svg?react";
+import IconLight from "@src/assets/iconLight.svg?react";
 import { cn, setTheme } from "@src/utils/common";
 
 type Props = {
