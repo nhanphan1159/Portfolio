@@ -5,5 +5,5 @@ export const Route = createFileRoute("/_layout/(home)/")({
 });
 
 function Index() {
-  return <div className="min-h-[1000px] pt-[100px]">Home</div>;
+  return <div className="min-h-[1000px]">Home</div>;
 }

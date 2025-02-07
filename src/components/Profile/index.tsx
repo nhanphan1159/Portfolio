@@ -41,7 +41,7 @@ const Profile: FC<Props> = ({ className = "" }) => {
   return (
     <div
       className={cn(
-        "flex flex-col justify-end items-center rounded-xl w-[300px] h-[500px] pb-5 border-2 border-[#B7A261] gap-3",
+        "flex flex-col justify-end items-center rounded-xl pb-5 border-2 border-[#B7A261] gap-4 bg-[white] dark:bg-black p-5",
         className
       )}
     >

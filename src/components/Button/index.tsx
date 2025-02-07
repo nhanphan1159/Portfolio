@@ -12,7 +12,7 @@ const Button: FC<Props> = ({ className = "", lable, onClick }) => {
   return (
     <button
       className={cn(
-        "flex justify-center items-center py-3 px-[31px] border-2 border-[#403D22] bg-[#B7A261] rounded-xl cursor-pointer dark:bg-[#wC2B293]",
+        "flex justify-center items-center py-3 px-[31px] border-2 border-[#B7A261] dark:border-[#4B3D10] bg-[#E0CE93] rounded-xl cursor-pointer dark:bg-[#wC2B293]",
         className
       )}
       onClick={onClick}

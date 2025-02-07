@@ -10,7 +10,7 @@ type Props = {
 
 const Header: FC<Props> = ({ className = "" }) => {
   return (
-    <div className="w-full m-auto fixed top-0 left-0 p-4 flex justify-center items-center z-10 backdrop-blur-2xl">
+    <div className="w-full m-auto fixed top-0 left-0 p-4 flex justify-center items-center z-10 backdrop-blur-2xl bg-[#FEF6DD] dark:bg-[#131312]">
       <div
         className={cn(
           "flex w-full max-w-[1024px] justify-between items-center",
