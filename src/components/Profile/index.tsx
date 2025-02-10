@@ -73,7 +73,7 @@ const Profile: FC<Props> = ({ className = "" }) => {
           <Info key={index} icon={item.icon} text={item.value} />
         ))}
       </div>
-      <a href="/src/assets/CV.pdf" download="CV-NhanPhan.pdf">
+      <a href="/CV-NhanPhan.pdf" download="CV-NhanPhan.pdf">
         <Button
           lable="View Resume"
           className="dark:bg-[#C2B293] shadow-profile"
