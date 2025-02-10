@@ -53,7 +53,7 @@ const Profile: FC<Props> = ({ className = "" }) => {
         </h2>
         <Job
           text="Frontend Developer"
-          className="shadow-profile dark:text-[#CCC0C0] dark:bg-[#4B3D10] bg-[#B7A261] text-sm leading-[150%]"
+          className="shadow-profile dark:text-[#CCC0C0]  bg-[#FEF6DD] dark:bg-[#272522] text-sm leading-[150%]"
         />
       </div>
       <div className="flex gap-5">
@@ -73,10 +73,12 @@ const Profile: FC<Props> = ({ className = "" }) => {
           <Info key={index} icon={item.icon} text={item.value} />
         ))}
       </div>
-      <Button
-        lable="View Resume"
-        className="dark:bg-[#C2B293] shadow-profile"
-      />
+      <a href="/src/assets/CV.pdf" download="CV-NhanPhan.pdf">
+        <Button
+          lable="View Resume"
+          className="dark:bg-[#C2B293] shadow-profile"
+        />
+      </a>
     </div>
   );
 };
