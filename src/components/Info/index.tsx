@@ -12,7 +12,7 @@ const Info: FC<Props> = ({ className = "", icon, text }) => {
   return (
     <div
       className={cn(
-        "flex justify-start items-center gap-5 pb-2.5 border-b border-[#0000001A] last-of-type:border-b-0 last:pb-0",
+        "flex justify-start items-center gap-4 pb-2.5 border-b border-[#0000001A] last-of-type:border-b-0 last:pb-0",
         className
       )}
     >

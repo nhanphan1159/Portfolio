@@ -12,6 +12,7 @@ import Button from "@src/components/Button";
 import Info from "@src/components/Info";
 import Job from "@src/components/Job";
 import Social from "@src/components/Social";
+import GetApi from "@src/services/GetApi";
 import { cn } from "@src/utils/common";
 
 type Props = {
@@ -19,23 +20,34 @@ type Props = {
 };
 
 const Profile: FC<Props> = ({ className = "" }) => {
+  const data = GetApi("info") as {
+    name: string;
+    role: string;
+    phone: string;
+    email: string;
+    location: string;
+    birth: string;
+    linked: string;
+    github: string;
+  } | null;
+  console.log(data);
   const info = [
     {
       icon: <IconPhone />,
-      value: "0383283926",
+      value: data?.phone || "",
     },
     {
       icon: <IconMail />,
-      value: "nhanphan1159@gmail.com",
+      value: data?.email || "",
     },
 
     {
       icon: <IconLocation />,
-      value: "HCM, Vietnam",
+      value: data?.location || "",
     },
     {
       icon: <IconBirthday />,
-      value: "21/08/2000",
+      value: data?.birth || "",
     },
   ];
   return (
@@ -49,22 +61,22 @@ const Profile: FC<Props> = ({ className = "" }) => {
         <Avatar img={AvatarImg} className="size-[150px] -mt-[90px]" />
 
         <h2 className="font-bold text-[18px] leading-[150%] dark:text-[#CCC0C0]">
-          Phan Huynh Huu Nhan
+          {data?.name || ""}
         </h2>
         <Job
-          text="Frontend Developer"
+          text={data?.role || ""}
           className="shadow-profile dark:text-[#CCC0C0]  bg-[#FEF6DD] dark:bg-[#272522] text-sm leading-[150%]"
         />
       </div>
       <div className="flex gap-5">
         <Social
           icon={<IconLinked />}
-          url="https://www.facebook.com"
+          url={data?.linked || ""}
           className="bg-[#3662E3]"
         />
         <Social
           icon={<IconGithub />}
-          url="https://www.facebook.com"
+          url={data?.github || ""}
           className="bg-black dark:bg-white dark:text-white"
         />
       </div>
