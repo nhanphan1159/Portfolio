@@ -9,7 +9,12 @@ type Props = {
 
 const Avatar: FC<Props> = ({ className = "", img }) => {
   return (
-    <div className={cn("flex justify-center items-center p-0.5", className)}>
+    <div
+      className={cn(
+        "flex justify-center items-center border-2 border-main dark:border-dark rounded-xl",
+        className
+      )}
+    >
       <img src={img} alt="123" />
     </div>
   );

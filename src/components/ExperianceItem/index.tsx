@@ -20,7 +20,7 @@ const ExperianceItem: FC<Props> = ({
   return (
     <div
       className={cn(
-        "flex w-full justify-start items-center gap-5 border-2 rounded-xl border-main p-5",
+        "flex w-full justify-start items-center gap-5 border-2 rounded-xl border-main dark:border-dark p-5",
         className
       )}
     >

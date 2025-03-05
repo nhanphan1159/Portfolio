@@ -57,7 +57,7 @@ const Profile: FC<Props> = ({ className = "" }) => {
       {getApi.loading && <LoadingPage />}
       <div
         className={cn(
-          "flex flex-col justify-end items-center rounded-xl pb-5 border-2 border-[#B7A261] gap-4 bg-[white] dark:bg-black p-5",
+          "flex flex-col justify-end items-center rounded-xl pb-5 border-2 border-[#B7A261] dark:border-[#4B3D10] gap-4 bg-[white] dark:bg-black p-5",
           className
         )}
       >

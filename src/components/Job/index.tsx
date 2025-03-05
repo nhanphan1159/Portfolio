@@ -11,7 +11,7 @@ const Job: FC<Props> = ({ className = "", text }) => {
   return (
     <div
       className={cn(
-        "flex justify-center items-center gap-5 border border-[#B7A261] rounded-xl bg-[#FEF6DD] w-[193px] h-[38px] dark:bg-black",
+        "flex justify-center items-center gap-5 border border-[#B7A261] dark:border-[#4B3D10] rounded-xl bg-[#FEF6DD] w-[193px] h-[38px] dark:bg-black",
         className
       )}
     >
