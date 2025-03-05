@@ -13,7 +13,7 @@ const WorkItem: FC<Props> = ({ className = "", imgUrl, content, title }) => {
   return (
     <div
       className={cn(
-        "w-full flex justify-center items-center gap-[15px] border-2 border-main dark:boder-[#625839] rounded-[0.625rem] bg-[#FDF4F4] dark:bg-[#60594B]",
+        "w-full flex justify-center items-center gap-[15px] border-2 border-main rounded-[0.625rem] bg-[#FDF4F4] dark:bg-[#60594B] dark:border-dark",
         className
       )}
     >

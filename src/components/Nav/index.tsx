@@ -12,7 +12,7 @@ const Nav: FC<Props> = ({ className = "" }) => {
   return (
     <nav
       className={cn(
-        "flex flex-col gap-5 p-5 w-fit h-fit border-2 border-[#B7A261] rounded-3xl bg-white dark:bg-black",
+        "flex flex-col gap-5 p-5 w-fit h-fit border-2 border-[#B7A261] dark:border-[#4B3D10] rounded-3xl bg-white dark:bg-black",
         className
       )}
     >
