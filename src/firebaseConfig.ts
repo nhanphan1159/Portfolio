@@ -2,6 +2,7 @@
 import { getAnalytics } from "firebase/analytics";
 import { initializeApp } from "firebase/app";
 import { get, getDatabase, ref } from "firebase/database";
+import { getMessaging } from "firebase/messaging";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
@@ -21,5 +22,6 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const database = getDatabase(app);
 const storage = getStorage(app);
+const messaging = getMessaging(app);
 
-export { analytics, database, get, ref, storage };
+export { analytics, database, get, messaging, ref, storage };
