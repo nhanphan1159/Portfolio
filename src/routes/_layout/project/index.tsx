@@ -10,7 +10,14 @@ export const Route = createFileRoute("/_layout/project/")({
 
 function Project() {
   const getApi = GetApi("experiance");
-  const data = getApi.data;
+  const data = getApi.data as unknown as {
+    education: {
+      title: string;
+    };
+    work: {
+      work: { role: string }[];
+    };
+  };
   console.log(data);
 
   return (
